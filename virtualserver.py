@@ -56,7 +56,7 @@ try:
 
     newOrder = client['Virtual_Guest'].generateOrderTemplate(orderToRequest)
     pp(newOrder)
-	response = productOrderService.verifyOrder(orderData)
+    # response = productOrderService.verifyOrder(orderData)
 
 
 except SoftLayer.SoftLayerAPIError as e:
