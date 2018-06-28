@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python virtualserver.py'
+                sh 'python --version'
             }
         }
     }
