@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                sh 'docker version'
+                bat 'docker version'
             }
         }
     }
