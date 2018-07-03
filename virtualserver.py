@@ -22,6 +22,8 @@ API_USERNAME = '304454_angel.alcarria.nieto@es.ibm.com'
 # Generate one at https://control.softlayer.com/account/users
 API_KEY = '23f2648a2a557dc3db0b843215ca0a487f295350c4fe7f71a119f4508df1652c'
 
+templateId = 12345
+
 orderToRequest = {
     "datacenter": {
         "name": "dal09"
