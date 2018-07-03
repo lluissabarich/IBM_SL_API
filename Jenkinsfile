@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building..'
-                sh 'python virtualserver.py'
+                sh 'python --version'
             }
         }
     }
