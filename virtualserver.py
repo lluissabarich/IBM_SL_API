@@ -25,6 +25,7 @@ API_KEY = sys.argv[1]
 print(API_KEY)
 
 orderToRequest = {
+    "private": False,
     "hostname": "host1",  # The name of the server
     "domain": "example.com",  # The domain for the server
     "startCpus": 1,  # The number of logical CPU cores to allocate
@@ -35,7 +36,7 @@ orderToRequest = {
     "operatingSystemReferenceCode": "UBUNTU_LATEST",  # An identifier for the operating system to
                                                       # provision the server with.
     "datacenter": {  # Specifies which datacenter the server is to be provisioned in.
-        "name": "dal10"
+        "name": "ams01"
         },
     "userData": [
         {
