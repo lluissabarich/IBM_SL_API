@@ -25,22 +25,23 @@ API_KEY = sys.argv[1]
 print(API_KEY)
 
 orderToRequest = {
-    "datacenter": {
-        "name": "ams01"
+    "hostname": "host1",  # The name of the server
+    "domain": "example.com",  # The domain for the server
+    "startCpus": 1,  # The number of logical CPU cores to allocate
+    "maxMemory": 1,  # The amount of memory to allocate in gigabytes.
+    "localDiskFlag": False,  # Indicates that the vsi has at least one disk local to the host it runs on.
+                             # This does not include a SWAP device.
+    "hourlyBillingFlag": True,  # Specifies the billing type for the server.
+    "operatingSystemReferenceCode": "UBUNTU_LATEST",  # An identifier for the operating system to
+                                                      # provision the server with.
+    "datacenter": {  # Specifies which datacenter the server is to be provisioned in.
+        "name": "dal10"
         },
-    "dedicatedAccountHostOnlyFlag": "false",
-    "domain": "test.local",
-    "hostname": "test",
-    "hourlyBillingFlag": "true",
-    "localDiskFlag": "false",
-    "maxMemory": "1024",
-    "networkComponents": [
+    "userData": [
         {
-          "maxSpeed": 100
+            "value": "someValue"
         }
-      ],
-    "operatingSystemReferenceCode": "CENTOS_LATEST",
-    "startCpus": "1"
+     ]
     }
 
 client = SoftLayer.create_client_from_env(
@@ -48,6 +49,7 @@ client = SoftLayer.create_client_from_env(
     api_key=API_KEY
 )
 productOrderService = client['SoftLayer_Product_Order']
+virtualGuestService = client['SoftLayer_Virtual_Guest']
 
 
 """
@@ -56,7 +58,7 @@ when you are ready to create the server call the createObject method instead.
 """
 try:
 
-    newOrder = client['Virtual_Guest'].generateOrderTemplate(orderToRequest)
+    newOrder = virtualGuestService.generateOrderTemplate(orderToRequest)
     pp(newOrder)
     # response = productOrderService.verifyOrder(orderData)
 
