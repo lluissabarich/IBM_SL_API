@@ -55,7 +55,7 @@ when you are ready to create the server call the createObject method instead.
 """
 try:
 
-    newOrder = client['Virtual_Guest'].verifyOrder(orderToRequest)
+    newOrder = client['Virtual_Guest'].generateOrderTemplate(orderToRequest)
     pp(newOrder)
     # response = productOrderService.verifyOrder(orderData)
 
