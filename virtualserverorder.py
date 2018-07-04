@@ -26,6 +26,7 @@ API_KEY = sys.argv[1]
 print(API_KEY)
 
 orderToRequest = {
+    "privateNetworkOnlyFlag": True,  # Specifies the billing type for the server.
     "private": True,
     "hostname": "host1",  # The name of the server
     "domain": "example.com",  # The domain for the server
