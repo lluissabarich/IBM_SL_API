@@ -26,7 +26,7 @@ API_KEY = sys.argv[1]
 print(API_KEY)
 
 orderToRequest = {
-    "private": False,
+    "private": True,
     "hostname": "host1",  # The name of the server
     "domain": "example.com",  # The domain for the server
     "startCpus": 1,  # The number of logical CPU cores to allocate
