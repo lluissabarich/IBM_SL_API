@@ -22,6 +22,7 @@ API_USERNAME = '3044554_angel.alcarria.nieto@es.ibm.com'
 
 # Generate one at https://control.softlayer.com/account/users
 API_KEY = sys.argv[1]
+print(API_KEY)
 
 orderToRequest = {
     "datacenter": {
