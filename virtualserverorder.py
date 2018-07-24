@@ -19,11 +19,12 @@ import sys
 from pprint import pprint as pp
 
 # Your SoftLayer API username and key.
-API_USERNAME = '304454_angel.alcarria.nieto@es.ibm.com'
+#API_USERNAME = '304454_angel.alcarria.nieto@es.ibm.com'
 
 # Generate one at https://control.softlayer.com/account/users
 API_KEY = sys.argv[1]
-print(API_KEY)
+API_USERNAME = sys.argv[2]
+print(API_KEY,API_USERNAME)
 
 orderToRequest = {
     "privateNetworkOnlyFlag": True,  # Specifies the billing type for the server.
