@@ -26,7 +26,7 @@ print(API_KEY,API_USERNAME)
 orderToRequest = {
     "privateNetworkOnlyFlag": True,  # Specifies the billing type for the server.
     "private": True,
-    "hostname": "host1",  # The name of the server
+    "hostname": "host2",  # The name of the server
     "domain": "example.com",  # The domain for the server
     "startCpus": 1,  # The number of logical CPU cores to allocate
     "maxMemory": 1,  # The amount of memory to allocate in gigabytes.
