@@ -22,8 +22,8 @@ from pprint import pprint as pp
 #API_USERNAME = '304454_angel.alcarria.nieto@es.ibm.com'
 
 # Generate one at https://control.softlayer.com/account/users
-API_KEY = sys.argv[1]
-API_USERNAME = sys.argv[2]
+API_KEY = sys.argv[1] #he creado mi API_KEY en SoftLayer
+API_USERNAME = sys.argv[2] #tipo 304454_user@xx.xxx.xxx
 print(API_KEY,API_USERNAME)
 
 orderToRequest = {
@@ -64,7 +64,7 @@ try:
 
     newOrder = virtualGuestService.createObject(orderToRequest)
     pp(newOrder)
-    # response = productOrderService.verifyOrder(orderData)
+    # response = productOrderService.verifyOrder(orderToRequest)
 
 
 except SoftLayer.SoftLayerAPIError as e:
