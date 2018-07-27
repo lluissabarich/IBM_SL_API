@@ -18,6 +18,8 @@ import sys
 # For nice debug output:
 from pprint import pprint as pp
 
+# añadimos más comentarios
+
 # Generate one at https://control.softlayer.com/account/users
 API_KEY = sys.argv[1] #he creado mi API_KEY en SoftLayer
 API_USERNAME = sys.argv[2] #tipo 304454_user@xx.xxx.xxx
