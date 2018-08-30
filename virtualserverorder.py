@@ -9,6 +9,7 @@ Important manual pages:
 http://sldn.softlayer.com/reference/services/SoftLayer_Virtual_Guest/generateOrderTemplate
 http://sldn.softlayer.com/reference/services/SoftLayer_Virtual_Guest/createObject
 http://sldn.softlayer.com/reference/datatypes/SoftLayer_Virtual_Guest
+https://softlayer.github.io/python/create_server_simplified.py/
 License: http://sldn.softlayer.com/article/License
 Author: SoftLayer Technologies, Inc. <sldn@softlayer.com>
 """
@@ -26,7 +27,7 @@ print(API_KEY,API_USERNAME)
 orderToRequest = {
     "privateNetworkOnlyFlag": True,  # Specifies the billing type for the server.
     "private": True,
-    "hostname": "host2",  # The name of the server
+    "hostname": "hostSebas",  # The name of the server
     "domain": "example.com",  # The domain for the server
     "startCpus": 1,  # The number of logical CPU cores to allocate
     "maxMemory": 1,  # The amount of memory to allocate in gigabytes.
